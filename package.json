@@ -6,13 +6,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "eslint": "./node_modules/.bin/eslint .",
-    "test": "./node_modules/.bin/jest",
-    "build": "netlify deploy --prod"
+    "eslint": "eslint .",
+    "test": "jest",
+    "build": "netlify build",
+    "deploy": "netlify deploy --prod"
   },
   "repository": {
+    "homepage": "web-dialer.netlify.app",
     "type": "git",
-    "url": "github.com/TwilioDevEd/client-quickstart-node"
+    "url": "https://github.com/TwilioDevEd/client-quickstart-node"
   },
   "keywords": [
     "twilio",
@@ -26,7 +28,7 @@
   "author": "Twilio Developer Education",
   "license": "MIT",
   "engines": {
-    "node": ">=10.x"
+    "node": ">=14.x"
   },
   "dependencies": {
     "@twilio/voice-sdk": "^2.2.0",
@@ -34,7 +36,6 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "netlify-cli": "^17.22.1",
-    "netlify-lambda": "^2.0.16",
     "serverless-http": "^3.2.0",
     "twilio": "~3.64.0"
   },
